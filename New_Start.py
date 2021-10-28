@@ -1,3 +1,22 @@
-for x in range(100):
-    print("Hello world!")
-    print("Oh no, goodbye world!")
+#Введя ваш возраст программа предлагает прочитать книгу рекомендованную для вашего возраста
+old=""
+while type(old)!=int:
+    try:
+        old = int(input('Ваш возраст (от 3 до 100): '))
+    except:
+        ValueError
+
+print('Рекомендовано', end=' ')
+ 
+if 3 <= old < 6:
+    print(':"Заяц в лабиринте"')
+elif 6 <= old < 12:
+    print(':"Марсианин"')
+elif 12 <= old < 16:
+    print(':"Загадочный остров"')
+elif 16 <= old <100:
+    print(':"Поток сознания"')
+elif 100 <= old <=120:
+    print("идти в могилу")
+else:
+    print("Для вашего возраста ничего не найдено")
